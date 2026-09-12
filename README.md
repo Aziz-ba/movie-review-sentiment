@@ -8,10 +8,10 @@ Two skills in one project: **dynamic web scraping** (JavaScript "load more" pagi
 
 ## 🔬 Pipeline
 
-1. **Scrape** — Selenium drives a headless Chrome to the film's IMDb reviews page and repeatedly clicks *"Load more"* until every review is loaded (reviews are lazy-loaded, so a plain HTTP request isn't enough).
-2. **Parse** — BeautifulSoup extracts each review's title and body from the rendered page.
-3. **Classify** — each review is scored with a HuggingFace `AutoModelForSequenceClassification` sentiment model (tokenized with the matching `AutoTokenizer`).
-4. **Aggregate** — the per-review sentiments roll up into an overall **reputation signal** for the film.
+1. **Scrape** - Selenium drives a headless Chrome to the film's IMDb reviews page and repeatedly clicks *"Load more"* until every review is loaded (reviews are lazy-loaded, so a plain HTTP request isn't enough).
+2. **Parse** - BeautifulSoup extracts each review's title and body from the rendered page.
+3. **Classify** - each review is scored with a HuggingFace `AutoModelForSequenceClassification` sentiment model (tokenized with the matching `AutoTokenizer`).
+4. **Aggregate** - the per-review sentiments roll up into an overall **reputation signal** for the film.
 
 ---
 
